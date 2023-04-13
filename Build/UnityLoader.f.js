@@ -2874,7 +2874,7 @@ var UnityLoader = UnityLoader || {
             r.indexOf("UnknownError") != -1 || r.indexOf("Program terminated with exit(0)") != -1 || this.didShowErrorMessage))) {
                 var r = "An error occurred running the Unity content on this page. See your browser JavaScript console for more info. The error was:\n" + r;
                 r.indexOf("DISABLE_EXCEPTION_CATCHING") != -1 ? r = "An exception has occurred, but exception handling has been disabled in this build. If you are the developer of this content, enable exceptions in your project WebGL player settings to be able to catch the exception or see the stack trace." : r.indexOf("Cannot enlarge memory arrays") != -1 ? r = "Out of memory. If you are the developer of this content, try allocating more memory to your WebGL build in the WebGL player settings." : r.indexOf("Invalid array buffer length") == -1 && r.indexOf("Invalid typed array length") == -1 && r.indexOf("out of memory") == -1 && r.indexOf("could not allocate memory") == -1 || (r = "The browser could not allocate enough memory for the WebGL content. If you are the developer of this content, try allocating less memory to your WebGL build in the WebGL player settings."),
-                alert(r),
+                // alert(r),
                 this.didShowErrorMessage = !0
             }
         },
